@@ -86,7 +86,6 @@ module.exports = function (server, bodyParser) {
 
 		// update quiz
 		const updatedquiz = { ...quiz, ...req.body, updatedAt: new Date() };
-		console.log(updatedquiz);
 
 		// update db
 		const index = db.data.indexOf(quiz);
