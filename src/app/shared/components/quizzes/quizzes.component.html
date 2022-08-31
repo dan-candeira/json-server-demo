@@ -1,0 +1,20 @@
+<ul role="list" class="flow">
+	<li *ngFor="let quiz of quizzes" class="[ card ] [ flow ]">
+		<h2 class="card__title">{{ quiz?.description }}</h2>
+
+		<span [attr.data-variant]="quiz?.level | lowercase">
+			{{ quiz?.level | lowercase }}
+		</span>
+
+		<div class="card__actions">
+			<a class="button" [routerLink]="['quiz', quiz.id]">Editar</a>
+			<button
+				class="button"
+				data-variant="ghost"
+				(click)="onDeleteQuiz(quiz.id)"
+			>
+				Deletar
+			</button>
+		</div>
+	</li>
+</ul>

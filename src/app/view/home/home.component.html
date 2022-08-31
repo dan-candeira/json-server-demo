@@ -1,0 +1,13 @@
+<section class="wrapper">
+	<div class="quiz__main-action">
+		<a routerLink="quiz" class="button" data-variant="dark"
+			>Adicionar quiz</a
+		>
+		<button class="button" data-variant="ghost">logout</button>
+	</div>
+
+	<app-quizzes
+		[quizzes]="quizzes"
+		(deleteQuiz)="onDelete($event)"
+	></app-quizzes>
+</section>

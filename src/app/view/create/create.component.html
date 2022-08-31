@@ -1,0 +1,9 @@
+<section class="[ quiz__create ] [ wrapper ]">
+	<div class="quiz__main-action">
+		<a routerLink="/" class="button" data-variant="dark">Listar quizzes</a>
+		<button class="button" data-variant="ghost">logout</button>
+	</div>
+
+	<h2>Criar</h2>
+	<app-quiz (sendQuiz)="onSendForm($event)"></app-quiz>
+</section>

@@ -1,0 +1,13 @@
+@mixin variant-generator($variants-config) {
+	$variants: map-get($variants-config, 'items');
+	$attrs: map-get($variants-config, 'attr-map');
+
+	@each $variant, $values in $variants {
+		&[data-variant='#{$variant}'] {
+			@each $key, $value in $values {
+				$attribute: map-get($attrs, $key);
+				#{$attribute}: #{$value};
+			}
+		}
+	}
+}

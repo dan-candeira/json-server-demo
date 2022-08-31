@@ -1,0 +1,20 @@
+$gorko-badge-variants: (
+  'items': (
+    'easy': (
+      'bg': get-color('primary-shade'),
+      'fg': get-color('light'),
+    ),
+    'medium': (
+      'bg': get-color('quaternary'),
+      'fg': get-color('dark-shade'),
+    ),
+    'hard': (
+      'bg': get-color('quinary-shade'),
+      'fg': get-color('light'),
+    ),
+  ),
+  'attr-map': (
+    'bg': 'background-color',
+    'fg': 'color',
+  ),
+);

@@ -1,0 +1,30 @@
+.card {
+  padding-block: 0.5rem;
+  padding-inline: 0.8rem;
+
+  border-radius: 0.4rem;
+
+  &__title {
+    margin-block: 0.4rem;
+  }
+
+  span {
+    display: inline-block;
+    width: fit-content;
+
+    padding-block: 0.1rem;
+    padding-inline: 0.7rem;
+    border-radius: 3rem;
+
+    @include variant-generator($gorko-badge-variants);
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+
+    > * + * {
+      margin-inline-start: 1rem;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+<form class="[ form ] [ flow ]" [formGroup]="quiz" (submit)="onSend()">
+	<label>
+		Título
+		<input type="text" name="title" formControlName="title" />
+	</label>
+
+	<label>
+		Descrição
+		<input type="text" name="description" formControlName="description" />
+	</label>
+
+	<label>
+		Resposta
+		<input type="text" name="answer" formControlName="answer" />
+	</label>
+
+	<label>
+		Tempo
+		<input type="text" name="number" formControlName="time" />
+	</label>
+
+	<label>
+		Level
+		<select formControlName="level">
+			<option *ngFor="let level of levels" [value]="level.id">
+				{{ level.label }}
+			</option>
+		</select>
+	</label>
+
+	<button class="button" data-variant="dark" type="submit">Enviar</button>
+</form>

@@ -1,0 +1,11 @@
+<section class="[ quiz__edit ] [ wrapper ]">
+	<div class="quiz__main-action">
+		<a routerLink="/" class="button" data-variant="dark">Listar quizzes</a>
+		<button class="button" data-variant="ghost">logout</button>
+	</div>
+
+	<h2>Editar</h2>
+	<ng-container *ngIf="quiz">
+		<app-quiz [quizData]="quiz" (sendQuiz)="onSendForm($event)"></app-quiz>
+	</ng-container>
+</section>

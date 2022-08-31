@@ -1,0 +1,17 @@
+.quiz__create {
+	display: flex;
+	flex-direction: column;
+
+	.quiz__main-action {
+		display: flex;
+		justify-content: space-between;
+
+		margin-top: 1rem;
+	}
+
+	justify-content: center;
+
+	h2 {
+		text-align: center;
+	}
+}

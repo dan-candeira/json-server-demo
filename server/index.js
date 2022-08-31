@@ -1,16 +1,18 @@
-const jsonServer = require("json-server");
+const jsonServer = require('json-server');
 const server = jsonServer.create();
 const middlewares = jsonServer.defaults();
 
 //  services
-const sample = require("./sample-service/index.js");
+// const sample = require("./sample-service/index.js");
+const quiz = require('./quizzes/index.js');
 
 // Set default middlewares (logger, static, cors and no-cache)
 server.use(middlewares);
 
 // component services
-sample(server, jsonServer.bodyParser);
+// sample(server, jsonServer.bodyParser);
+quiz(server, jsonServer.bodyParser);
 
 server.listen(3000, () => {
-  console.log("JSON Server is running");
+	console.log('JSON Server is running');
 });

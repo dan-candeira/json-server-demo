@@ -1,0 +1,52 @@
+/* --- Resets --- */
+*,
+*::after,
+*::before {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul[role='list'] {
+  list-style: none;
+}
+
+a[class] {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  width: 100%;
+}
+
+main:focus {
+  outline: none;
+}
+
+summary > * {
+  display: inline;
+}
+
+summary {
+  margin-bottom: 1rem;
+}
+
+svg[aria-hidden='true'] {
+  pointer-events: none;
+}
+
+svg {
+  display: block;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :focus {
+    outline: 3px dotted get-color('secondary-shade');
+    transition: outline-offset 0.25s ease;
+    outline-offset: 5px;
+  }
+}
